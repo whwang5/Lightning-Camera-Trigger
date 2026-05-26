@@ -16,7 +16,7 @@ unsigned long lastLightTriggerTime = 0;
 int previousRadValue = 0;
 int previousLightValue = 0;
 
-void setup() {
+void camera_setup() {
     pinMode(RAD_SENSOR_PIN, INPUT);
     pinMode(LIGHT_SENSOR_PIN, INPUT);
     pinMode(CAMERA_TRIGGER_PIN, OUTPUT);
@@ -29,7 +29,7 @@ void setup() {
     previousLightValue = analogRead(LIGHT_SENSOR_PIN);
 }
 
-void loop() {
+void detect_loop() {
     unsigned long currentTime = millis(); //sets units to milliseconds
 
     int currentRadValue = analogRead(RAD_SENSOR_PIN);
